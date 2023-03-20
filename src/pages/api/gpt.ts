@@ -37,9 +37,6 @@ export default async function handler(
                     temperature: 0,
                     max_tokens: length
                 })
-
-                console.log('response data choices:', response.data.choices)
-
                 answer = response.data.choices[0].text || 'No answer available'
             }
 
