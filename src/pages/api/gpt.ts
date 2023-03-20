@@ -2,7 +2,7 @@ import {NextApiRequest, NextApiResponse} from 'next'
 import {Configuration, CreateCompletionResponse, OpenAIApi} from 'openai'
 import {AxiosResponse} from 'axios'
 
-const API_KEY = process.env.GPT_API_KEY || 'not_set'
+const API_KEY = process.env.GPT_API_KEY || ''
 
 const configuration = new Configuration({
     apiKey: API_KEY
@@ -30,7 +30,7 @@ export default async function handler(
                 throw Error("No prompt in request")
             }
             let answer = 'pong'
-            if (API_KEY !== 'not_set') {
+            if (API_KEY) {
                 const response: AxiosResponse<CreateCompletionResponse> = await openai.createCompletion({
                     model: 'text-davinci-003',
                     prompt: prompt,

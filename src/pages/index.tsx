@@ -50,7 +50,7 @@ export default function Home() {
     return (
         <>
             <Head>
-                <title>Create Next App</title>
+                <title>Adaptive Edge Tech Chat</title>
                 <meta name="description" content="Simple requests to chat GPT"/>
                 <meta name="viewport" content="width=device-width, initial-scale=1"/>
                 <link rel="icon" href="/favicon.ico"/>
@@ -61,7 +61,7 @@ export default function Home() {
                 </div>
 
                 <div className={styles.center}>
-                    <MainContainer style={{width: '600px', height: '500px'}}>
+                    <MainContainer className={styles.chatContainer}>
                         <ChatContainer>
                             <ConversationHeader>
                                 <ConversationHeader.Content userName={'GPT'} info={'Model: text-davinci-003'} />

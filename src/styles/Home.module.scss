@@ -63,6 +63,11 @@
   form {
     z-index: 1;
   }
+
+  .chatContainer {
+    height: 500px;
+    width: 500px;
+  }
 }
 
 /*!* Enable hover only on non-touch devices *!*/
@@ -79,6 +84,10 @@
 
 /* Mobile */
 @media (max-width: 700px) {
+  .main {
+    padding: 1rem;
+  }
+
   .content {
     padding: 4rem;
   }
@@ -91,11 +100,16 @@
   }
 
   .center {
-    padding: 8rem 0 6rem;
+    padding: 2rem 0 1rem;
+    width: 100%;
 
     &::before {
       transform: none;
       height: 300px;
+    }
+
+    .chatContainer {
+      width: 100%;
     }
   }
 
